@@ -1,0 +1,133 @@
+.body-container{
+    margin-left:5%;
+    margin-right:5%;
+}
+
+header{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-btn{
+    background: blue;
+    border: 1px blue solid;
+    padding-right:20px;
+    padding-left:20px;
+    border-radius:20px;
+    color: white;
+    font-weight: bold;
+}
+
+.brandname{
+    margin-bottom: 0;
+    font-size:20px;
+    color: blue;
+    font-weight: bold;
+}
+
+.links a{
+    font-weight: bold;
+    color:rgb(255, 132, 0);
+}
+
+.links a:hover{
+    color:rgb(165, 75, 42);
+}
+
+.logo{
+    width: 25px;
+    height: 25px;
+}
+
+.logo-container{
+    display: flex;
+}
+
+.swiper-wrapper{
+    display: flex;
+}
+
+.carousel-img{
+    height: 500px;
+}
+
+.swiper{
+    border-radius: 20px !important;
+}
+
+.carousel-items{
+    top:35%;
+    right: 35% !important;
+    left: 35% !important;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.login-btn-inner{
+    display:none;
+    background: blue;
+    border: 1px blue solid;
+    padding-right:20px;
+    padding-left:20px;
+    border-radius:20px;
+    color: white;
+    font-weight: bold;
+}
+
+.caption-title{
+    font-size: 40px;
+}
+
+/*--------------------------- Layer Two ----------------------------------*/
+.layer-two-r1{
+
+}
+
+.layer-two{
+    display: flex;
+    padding:10px 0 10px 0;
+    border: 1px solid black;
+    justify-content: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 10px;
+}
+
+.border-layer-two{
+    height: 30px;
+    border: 1px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.explore-btn{
+    background: blue !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+}
+
+.layer3{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.inner-3{
+    cursor: pointer;
+    transition: .5s;
+}
+
+.inner-3:hover{
+    transform: scale(1.05);
+}
+
+/*-------------------------- Layer 4 --------------------------*/
+.recommend-title{
+    font-size: 30px;
+    font-weight: bold;
+}
