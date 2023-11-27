@@ -83,6 +83,13 @@ header{
 }
 
 /*--------------------------- Layer Two ----------------------------------*/
+.check-out,
+.check-in{
+    width: 100px !important;
+    border:none;
+    padding: 5px;
+}
+
 .layer-two-r1{
 
 }
@@ -92,8 +99,8 @@ header{
     padding:10px 0 10px 0;
     border: 1px solid black;
     justify-content: center;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 27%;
+    margin-right: 27%;
     border-radius: 10px;
 }
 
