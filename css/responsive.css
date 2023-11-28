@@ -64,4 +64,31 @@
     .recommend-title{
         font-size: 20px;
     }
+
+    .dest-image{
+        width: 350px !important;
+        height: 350px !important;
+    }
+
+    .destination-card{
+        margin: auto;
+        width: 350px !important;
+        height: 350px !important;
+        margin-bottom: 100px !important;
+    }
+
+    /*-------------------------- Layer 5 ---------------------------*/
+    .layer5{
+        display: block !important;
+    }
+    .layer5-img-large,
+    .layer5-img-sm{
+        margin-bottom: 20px;
+    }
+
+    .layer5-lg-sm,
+    .layer5-lg-text{
+        font-size: 20px !important;
+        width: 200px;
+    }
 }

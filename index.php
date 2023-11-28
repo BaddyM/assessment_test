@@ -1,3 +1,6 @@
+<?php
+    include 'config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -173,12 +176,241 @@
                 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  <div class="tab-pane active" id="asia" role="tabpanel" aria-labelledby="home-tab"> Asia </div>
-                  <div class="tab-pane" id="europa" role="tabpanel" aria-labelledby="profile-tab"> Europa </div>
-                  <div class="tab-pane" id="africa" role="tabpanel" aria-labelledby="messages-tab"> Africa </div>
-                  <div class="tab-pane" id="america" role="tabpanel" aria-labelledby="messages-tab"> America </div>
+                    <div class="tab-pane active" id="asia" role="tabpanel" aria-labelledby="home-tab"> 
+                        <div class="d-flex w-100 justify-content-between flex-wrap" style="column-gap: 10px;">
+                        <?php
+                            $sql = 'SELECT * FROM destinations';
+                            $query = mysqli_query($conn, $sql);
+                            while($row = mysqli_fetch_assoc($query)){
+
+                        ?>
+                        <div class="card border-0 destination-card">
+                            <img src="images/destination/<?php echo $row['image'];?>" class="rounded-3 dest-image" alt="">
+                            <div class="card-body">
+                                <p class="mb-0 fw-bold" style="font-size:22px;"><?php echo $row['title'];?></p>
+                                <p class="mb-0" style="font-size:16px;">
+                                <?php echo $row['body_text'];?>
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex">
+                                        <img src="images/icons/1.png" class="img-fluid icons" style="width:30px; height:30px;" alt="">
+                                        <img src="images/icons/2.png" class="img-fluid icons" style="width:30px; height:30px;" alt="">
+                                        <img src="images/icons/3.png" class="img-fluid icons" style="width:30px; height:30px;" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="price mb-0">
+                                            &euro;
+                                            <span style="font-size:18px;">
+                                                <?php echo number_format($row['price']);?>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between mt-2">
+                                    <div class="fw-bold">
+                                        <span>
+                                            <?php echo $row['distance'];?>
+                                        </span>
+                                        Kms
+                                    </div>
+
+                                    <div class="fw-bold">
+                                        Approx 2 nighttrip
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                            }
+                        ?>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane" id="europa" role="tabpanel" aria-labelledby="profile-tab"> 
+                    <div class="d-flex w-100 justify-content-between flex-wrap" style="column-gap: 10px;">
+                        <?php
+                            $sql = 'SELECT * FROM destinations';
+                            $query = mysqli_query($conn, $sql);
+                            while($row = mysqli_fetch_assoc($query)){
+
+                        ?>
+                        <div class="card border-0 destination-card">
+                            <img src="images/destination/<?php echo $row['image'];?>" class="rounded-3 dest-image" alt="">
+                            <div class="card-body">
+                                <p class="mb-0 fw-bold" style="font-size:22px;"><?php echo $row['title'];?></p>
+                                <p class="mb-0" style="font-size:16px;">
+                                <?php echo $row['body_text'];?>
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex">
+                                        <img src="images/icons/1.png" class="img-fluid icons" style="width:30px; height:30px;" alt="">
+                                        <img src="images/icons/2.png" class="img-fluid icons" style="width:30px; height:30px;" alt="">
+                                        <img src="images/icons/3.png" class="img-fluid icons" style="width:30px; height:30px;" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="price mb-0">
+                                            &euro;
+                                            <span style="font-size:18px;">
+                                                <?php echo number_format($row['price']);?>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between mt-2">
+                                    <div class="fw-bold">
+                                        <span>
+                                            <?php echo $row['distance'];?>
+                                        </span>
+                                        Kms
+                                    </div>
+
+                                    <div class="fw-bold">
+                                        Approx 2 nighttrip
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                            }
+                        ?>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="africa" role="tabpanel" aria-labelledby="messages-tab"> 
+                    <div class="d-flex w-100 justify-content-between flex-wrap" style="column-gap: 10px;">
+                        <?php
+                            $sql = 'SELECT * FROM destinations';
+                            $query = mysqli_query($conn, $sql);
+                            while($row = mysqli_fetch_assoc($query)){
+
+                        ?>
+                        <div class="card border-0 destination-card">
+                            <img src="images/destination/<?php echo $row['image'];?>" class="rounded-3 dest-image" alt="">
+                            <div class="card-body">
+                                <p class="mb-0 fw-bold" style="font-size:22px;"><?php echo $row['title'];?></p>
+                                <p class="mb-0" style="font-size:16px;">
+                                <?php echo $row['body_text'];?>
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex">
+                                        <img src="images/icons/1.png" class="img-fluid icons" style="width:30px; height:30px;" alt="">
+                                        <img src="images/icons/2.png" class="img-fluid icons" style="width:30px; height:30px;" alt="">
+                                        <img src="images/icons/3.png" class="img-fluid icons" style="width:30px; height:30px;" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="price mb-0">
+                                            &euro;
+                                            <span style="font-size:18px;">
+                                                <?php echo number_format($row['price']);?>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between mt-2">
+                                    <div class="fw-bold">
+                                        <span>
+                                            <?php echo $row['distance'];?>
+                                        </span>
+                                        Kms
+                                    </div>
+
+                                    <div class="fw-bold">
+                                        Approx 2 nighttrip
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                            }
+                        ?>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="america" role="tabpanel" aria-labelledby="messages-tab"> 
+                    <div class="d-flex w-100 justify-content-between flex-wrap" style="column-gap: 10px;">
+                        <?php
+                            $sql = 'SELECT * FROM destinations';
+                            $query = mysqli_query($conn, $sql);
+                            while($row = mysqli_fetch_assoc($query)){
+
+                        ?>
+                        <div class="card border-0 destination-card">
+                            <img src="images/destination/<?php echo $row['image'];?>" class="rounded-3 dest-image" alt="">
+                            <div class="card-body">
+                                <p class="mb-0 fw-bold" style="font-size:22px;"><?php echo $row['title'];?></p>
+                                <p class="mb-0" style="font-size:16px;">
+                                <?php echo $row['body_text'];?>
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex">
+                                        <img src="images/icons/1.png" class="img-fluid icons" style="width:30px; height:30px;" alt="">
+                                        <img src="images/icons/2.png" class="img-fluid icons" style="width:30px; height:30px;" alt="">
+                                        <img src="images/icons/3.png" class="img-fluid icons" style="width:30px; height:30px;" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="price mb-0">
+                                            &euro;
+                                            <span style="font-size:18px;">
+                                                <?php echo number_format($row['price']);?>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between mt-2">
+                                    <div class="fw-bold">
+                                        <span>
+                                            <?php echo $row['distance'];?>
+                                        </span>
+                                        Kms
+                                    </div>
+
+                                    <div class="fw-bold">
+                                        Approx 2 nighttrip
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                            }
+                        ?>
+                        </div>
+                    </div>
                 </div>
+
             </div><!-- Layer 4 -->
+
+            <h5 class="text-center recommend-title">Blogs</h5>            
+
+            <div>
+                <div class="d-flex layer5" style="column-gap: 20px;">
+                    <div class="col-md-8 text-center d-flex justify-content-center align-items-center">
+                        <img class="img-fluid layer5-img-large rounded-4" src="images/blogs/1200px-Mt._Kilimanjaro_12.2006.jpeg" alt="">
+                        <p class="layer5-lg-text">
+                           The Ultimate Guide
+                            to Climbing
+                            Mount Kilimanjaro
+                        </p> 
+                    </div>
+                    <div class="col-md-4 d-block">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img class="img-fluid layer5-img-sm rounded-4 mb-4"  src="images/blogs/travel-industry-air.jpg" alt="">
+                            <p class="layer5-lg-sm position-absolute">
+                                12 Things I’d Tell Any
+                                New Traveler
+                            </p> 
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img class="img-fluid layer5-img-sm rounded-4"  src="images/blogs/travel-world.jpg" alt="">
+                            <p class="layer5-lg-sm position-absolute">
+                                The Ultimate Packing List for
+                                Female Travelers
+                            </p> 
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Layer 5 -->
 
         </div><!-- Body content -->
 
