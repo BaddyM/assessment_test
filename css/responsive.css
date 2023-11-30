@@ -1,4 +1,8 @@
 @media only screen and (max-width:767px){
+    .swiper{
+        margin-top: 10px;
+        height: 400px;
+    }
     .carousel-items{
         top:0;
         right: 0 !important;
@@ -14,6 +18,7 @@
         display: none;
     }
     .links-button{
+        display: none;
         position: absolute;
         margin-top: 300px;
         margin-left: 10%;
@@ -90,5 +95,27 @@
     .layer5-lg-text{
         font-size: 20px !important;
         width: 200px;
+    }
+
+    /*------------------ Layer 6 ------------------------*/
+    .clients{
+        display: block;
+    }
+    .client-card{
+        width: 100%;
+        padding: 1%;
+        margin-bottom: 50px;
+    }
+    footer{
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+    .socials{
+        display: flex;
+        justify-content: space-between;
+    }
+    .bottom-nav{
+        font-size: 14px;
     }
 }

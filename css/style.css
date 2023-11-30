@@ -49,7 +49,7 @@ header{
     display: flex;
 }
 
-.carousel-img{
+.swiper,.carousel-img{
     height: 500px;
 }
 
@@ -57,10 +57,17 @@ header{
     border-radius: 20px !important;
 }
 
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .carousel-items{
-    top:35%;
-    right: 35% !important;
-    left: 35% !important;
+    position: absolute;
+    width: 40%;
+    text-align: center;
+    color: white;
 }
 
 .mobile-menu{
@@ -176,4 +183,41 @@ header{
     font-weight: bold;
     width: 300px;
     text-align: center;
+}
+
+/*---------------------- Layer 5 ------------------------------*/
+.clients{
+    display: flex;
+    justify-content: space-between;
+}
+
+.client-card{
+    width: 47%;
+    padding: 1%;
+}
+
+/*---------------------------- Footer -------------------------------*/
+footer{
+    background: rgb(195, 211, 211);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding: 40px 20px 40px 20px;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.bottom-nav{
+    color: rgb(62, 62, 62) !important;
+    transition: .4s;
+}
+
+.bottom-nav:hover{
+    color: black !important;
+}
+
+/*--------------------------- Login ---------------------------------*/
+input{
+    box-shadow: none !important;
+    outline: none !important;
 }

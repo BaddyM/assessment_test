@@ -1,5 +1,6 @@
 <?php
     include 'config.php';
+    include 'login-modal.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,8 +42,8 @@
             </div>
 
             <div>
-                    <button class="login-btn" type="button">LOGIN</button>
-                </div>
+                <button class="login-btn" type="button">LOGIN</button>
+            </div>
         </header><!-- navbar here -->
 
         <div class="links-container">
@@ -54,7 +55,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img class="carousel-img w-100" src="images/carousel/1.jpg">
-                        <div class="carousel-caption d-none d-md-block carousel-items">
+                        <div class="d-none d-md-block carousel-items">
                             <h4 class="caption-title">TRAVEL TO EXPLORE</h4>
                             <p>
                                 Lorem Ipsum Dolor Sit Amet, Consectetur
@@ -65,7 +66,7 @@
                     </div>
                     <div class="swiper-slide">
                         <img class="carousel-img w-100" src="images/carousel/2.jpg">
-                        <div class="carousel-caption d-none d-md-block carousel-items">
+                        <div class="d-none d-md-block carousel-items">
                             <h4 class="caption-title">TRAVEL TO EXPLORE</h4>
                             <p>
                                 Lorem Ipsum Dolor Sit Amet, Consectetur
@@ -412,9 +413,92 @@
                 </div>
             </div><!-- Layer 5 -->
 
+            <h5 class="text-center recommend-title my-4">Clients</h5>
+
+            <div class="clients mb-5">
+                <div class="card client-card border-0 shadow-lg rounded-3">
+                    <div class="card-body py-4">
+                        <div class="d-flex mb-3">
+                            <img src="images/clients/quotes.png" style="width: 30px; height:30px;line-height:30px;" alt="">
+                            <div class="d-block">
+                                <p class="mb-0 ms-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna
+                                    aliqua. Ultricies mi eget mauris pharetra. Amet risus nullam
+                                    eget felis eget nunc lobortis. Purus in massa tempor nec.
+                                    Porta nibh venenatis cras sed. Viverra ipsum nunc aliquet
+                                </p>
+                                <div class="d-flex mt-3">
+                                    <img src="images/clients/1.png" style="width: 50px; height:50px;" alt="">
+                                    <div class="d-block ms-2">
+                                        <p class="mb-0 fw-bold">Mario Rossi</p>
+                                        <p class="text-muted mb-0">Manager</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div><!-- Element one --->
+
+                <div class="card border-0 client-card shadow-lg rounded-3">
+                    <div class="card-body py-4">
+                        <div class="d-flex mb-3">
+                            <img src="images/clients/quotes.png" style="width: 30px; height:30px;line-height:30px;" alt="">
+                            <div class="d-block">
+                                <p class="mb-0 ms-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna
+                                    aliqua. Ultricies mi eget mauris pharetra. Amet risus nullam
+                                    eget felis eget nunc lobortis. Purus in massa tempor nec.
+                                    Porta nibh venenatis cras sed. Viverra ipsum nunc aliquet
+                                </p>
+                                <div class="d-flex mt-3">
+                                    <img src="images/clients/1.png" style="width: 50px; height:50px;" alt="">
+                                    <div class="d-block ms-2">
+                                        <p class="mb-0 fw-bold">Mario Rossi</p>
+                                        <p class="text-muted mb-0">Manager</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div><!-- Element two --->
+            </div><!-- Layer 6 -->
+
         </div><!-- Body content -->
 
         <footer class="mt-3">
+            <div style="font-size: 13px;">
+            Copyright © 2021 Proto Web Site Test. All rights reserved 
+            </div>
+
+            <div>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a style="font-size: 13px;" class="nav-link bottom-nav" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 13px;" class="nav-link bottom-nav" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 13px;" class="nav-link bottom-nav" href="#">Places</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 13px;" class="nav-link bottom-nav" href="#">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 13px;" class="nav-link bottom-nav" href="#">Blog</a>
+                    </li>
+                </ul>
+            </div><!-- nav bar here -->
+
+            <div class="d-flex socials">
+                <i class="bi bi-facebook me-3" style="color:rgb(93, 93, 239);font-size:30px;"></i>
+                <i class="bi bi-linkedin me-3" style="color:blue;font-size:30px;"></i>
+                <i class="bi bi-instagram" style="color:purple;font-size:30px;"></i>
+            </div><!-- Socials -->
 
         </footer><!-- Footer content -->
 
@@ -427,6 +511,10 @@
     <script src="js/bootstrap.bundle.js"></script>
 
     <script>
+        $(".login-btn-inner, .login-btn").on('click',function(){
+            $("#loginModal").modal('show');
+        })
+
         //Initialize the date picker
         $(".check-in, .check-out").datepicker({
             todayHiglight: true,
@@ -449,8 +537,10 @@
             var disp = $(".links-container").css('display')
             if(disp == 'none'){
                 $(".links-container").css('display','block')
+                $(".links-button").css('display','block');
             }else{
                 $(".links-container").css('display','none')
+                $(".links-button").css('display','none');
             }
         })
 
